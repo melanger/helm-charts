@@ -33,12 +33,11 @@
 {{- end -}}
 
 {{/*
-Allow setting all typesafe config properties with environment variables. This is required because not all config
-properties have environment variable substitutions configured.
+Set Java options.
 */}}
-{{- define "ortserver.env.typesafeConfigOverride" -}}
+{{- define "ortserver.env.javaOpts" -}}
 - name: JAVA_TOOL_OPTIONS
-  value: "-Dconfig.override_with_env_vars=true"
+  value: "{{ .Values.javaOpts }}"
 {{- end -}}
 
 {{/* Environment variables to configure the file archive storage. */}}

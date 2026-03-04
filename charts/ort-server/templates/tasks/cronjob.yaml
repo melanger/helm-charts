@@ -41,7 +41,7 @@ spec:
                 {{- include "ortserver.env.database" $ | nindent 16 }}
                 {{- include "ortserver.env.fileListStorage" $ | nindent 16 }}
                 {{- include "ortserver.env.reportStorage" $ | nindent 16 }}
-                {{- include "ortserver.env.typesafeConfigOverride" $ | nindent 16 }}
+                {{- include "ortserver.env.javaOpts" $ | nindent 16 }}
 
                 # Config secrets
                 - name: TASKS_SECRET_PROVIDER

@@ -179,3 +179,10 @@ ui:
     port: 8082
 
 extraObjects: []
+
+# -- Allow setting all typesafe config properties with environment variables.
+# This is required because not all config properties have environment variable substitutions configured.
+# Also silent credentials cache warning.
+javaOpts: >-
+  -Dconfig.override_with_env_vars=true
+  --add-opens java.base/sun.net.www.protocol.http=ALL-UNNAMED
