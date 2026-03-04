@@ -102,12 +102,14 @@ core:
   extraVolumes: []
   ## @param core.extraVolumeMounts Additional volume mounts for the core deployment
   extraVolumeMounts: []
+  extraEnv: []
 
 orchestrator:
   ## @param orchestrator.extraVolumes Additional volumes for the orchestrator deployment
   extraVolumes: []
   ## @param orchestrator.extraVolumeMounts Additional volume mounts for the orchestrator deployment
   extraVolumeMounts: []
+  extraEnv: []
 
 advisor:
   mountPvcs: ""

@@ -307,3 +307,7 @@ spec:
               value: {{ .Values.configSecrets.name }}
             - name: SCANNER_SECRET_FILES
               value: {{ .Values.configSecrets.files }}
+
+            {{- with .Values.orchestrator.extraEnv }}
+            {{- toYaml . | nindent 12 }}
+            {{- end }}
